@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';  // Add this import statement at the top of your file
 
 const Home = () => {
   return (
@@ -9,11 +10,20 @@ const Home = () => {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '30px 20px',
-    backgroundColor: '#3D5926',
+    backgroundColor: '#AE150D',
     color: '#fff',
   }}
 >
-  <h1 style={{ fontSize: '18px', margin: '0' }}>Swift Burgers</h1>
+<h1
+  style={{
+    fontSize: '30px',
+    margin: '0',
+    fontWeight: 'bold', // Makes the text bold
+    fontFamily: "'Lobster', sans-serif", // Adds a custom font (you can replace 'Lobster' with any preferred font)
+  }}
+>
+  Swift Burgers
+</h1>
   <p style={{ fontSize: '18px', margin: '0' }}>The tastiest burgers in town!</p>
 </header>
 
@@ -21,20 +31,25 @@ const Home = () => {
 
       {/* Main Content */}
 <main style={{ marginTop: '30px' }}>
-      <h1
+<div
   style={{
-    fontSize: '78px',
-    margin: '0',
-    fontWeight: 'bold',
-    color: '#AE150D',
-    fontFamily: "'Merriweather', serif", // You can replace 'Lobster' with any preferred font
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: '20px',
   }}
 >
-  Swizz Burgers
-</h1>
+  {/* Logo Image */}
+  <img 
+    src="logo/logo.png" 
+    alt="Swizz Burgers Logo" 
+    style={{ width: '600px', height: '500px' }}
+  />
+</div>
+
 <h2
   style={{
-    fontSize: '24px',
+    fontSize: '30px',
     margin: '10px 0 0',
     fontWeight: 'normal',
     color: '#3D5926',
@@ -110,10 +125,10 @@ const Home = () => {
 
 
 
-        {/* Call-to-Action Button */}
-        <div style={{ marginTop: '40px' }}>
-          <a 
-            href="/menu" 
+{/* Call-to-Action Button */}
+<div style={{ marginTop: '40px' }}>
+          <Link
+            href="/menu/menu"  // Your target path
             style={{
               textDecoration: 'none',
               padding: '10px 20px',
@@ -125,8 +140,9 @@ const Home = () => {
             }}
           >
             Explore Our Menu
-          </a>
+          </Link>
         </div>
+
 
         <div
   style={{
@@ -288,7 +304,7 @@ const Home = () => {
 </main>
 
       {/* Footer */}
-      <footer style={{ marginTop: '50px', padding: '70px 0', backgroundColor: '#3D5926', color: '#fff' }}>
+      <footer style={{ marginTop: '50px', padding: '70px 0', backgroundColor: '#AE150D', color: '#fff' }}>
         <p>© 2024 Swizz Burgers. All rights reserved.</p>
       </footer>
     </div>
